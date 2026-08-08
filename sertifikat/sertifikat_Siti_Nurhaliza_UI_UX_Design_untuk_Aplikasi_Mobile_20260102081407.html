@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+        <html lang="id">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Sertifikat - UI/UX Design untuk Aplikasi Mobile</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 0;
+                    padding: 20px;
+                    background-color: #f5f5f5;
+                }
+                .certificate {
+                    max-width: 800px;
+                    margin: 0 auto;
+                    padding: 40px;
+                    background-color: white;
+                    border: 10px solid #2c3e50;
+                    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+                    text-align: center;
+                }
+                .header {
+                    color: #2c3e50;
+                    margin-bottom: 30px;
+                }
+                .header h1 {
+                    font-size: 36px;
+                    margin: 0;
+                }
+                .header h2 {
+                    font-size: 20px;
+                    color: #7f8c8d;
+                    margin: 10px 0 30px;
+                }
+                .content {
+                    margin: 40px 0;
+                }
+                .student-name {
+                    font-size: 32px;
+                    font-weight: bold;
+                    color: #2c3e50;
+                    margin: 20px 0;
+                    padding: 10px;
+                    border-bottom: 2px solid #3498db;
+                    display: inline-block;
+                }
+                .course-title {
+                    font-size: 24px;
+                    color: #34495e;
+                    margin: 20px 0;
+                }
+                .details {
+                    margin: 30px 0;
+                    font-size: 16px;
+                    color: #555;
+                }
+                .footer {
+                    margin-top: 50px;
+                    color: #7f8c8d;
+                    font-size: 14px;
+                }
+                .signature {
+                    margin-top: 60px;
+                    border-top: 1px solid #ddd;
+                    padding-top: 20px;
+                }
+                .stamp {
+                    color: #e74c3c;
+                    font-size: 12px;
+                    margin-top: 30px;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="certificate">
+                <div class="header">
+                    <h1>📜 SERTIFIKAT KELULUSAN</h1>
+                    <h2>WorkyWay - Platform Belajar Online</h2>
+                </div>
+                
+                <div class="content">
+                    <p>Diberikan kepada:</p>
+                    <div class="student-name">SITI NURHALIZA</div>
+                    
+                    <p>Telah berhasil menyelesaikan kursus:</p>
+                    <div class="course-title">UI/UX Design untuk Aplikasi Mobile</div>
+                    
+                    <div class="details"><p><strong>Nilai:</strong> 87.00</p><p><strong>Tanggal Pendaftaran:</strong> 19 February 2024</p>
+                    </div>
+                </div>
+                
+                <div class="signature">
+                    <p>Diberikan pada: 02 January 2026</p>
+                    <p><strong>Direktur WorkyWay</strong></p>
+                </div>
+                
+                <div class="footer">
+                    <p>Website: www.workyway.com | Email: info@workyway.com</p>
+                    <p class="stamp">ID Sertifikat: CERT-5-20260102</p>
+                </div>
+            </div>
+            
+            <script>
+                // Auto-print after 1 second
+                window.onload = function() {
+                    setTimeout(function() {
+                        window.print();
+                    }, 1000);
+                };
+            </script>
+        </body>
+        </html>

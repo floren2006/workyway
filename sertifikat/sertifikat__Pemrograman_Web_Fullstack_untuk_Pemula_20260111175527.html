@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+        <html lang="id">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Sertifikat - Pemrograman Web Fullstack untuk Pemula</title>
+            <style>
+                body {
+                    font-family: "Arial", sans-serif;
+                    margin: 0;
+                    padding: 0;
+                    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                    min-height: 100vh;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .certificate-container {
+                    width: 100%;
+                    max-width: 900px;
+                    padding: 20px;
+                }
+                .certificate {
+                    background: white;
+                    border: 15px solid #2c3e50;
+                    border-radius: 25px;
+                    padding: 50px;
+                    text-align: center;
+                    position: relative;
+                    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+                }
+                .certificate:before {
+                    content: "";
+                    position: absolute;
+                    top: 20px;
+                    left: 20px;
+                    right: 20px;
+                    bottom: 20px;
+                    border: 2px solid #3498db;
+                    pointer-events: none;
+                    border-radius: 10px;
+                }
+                .header {
+                    margin-bottom: 40px;
+                }
+                .header h1 {
+                    color: #2c3e50;
+                    font-size: 48px;
+                    margin: 0;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                }
+                .header h2 {
+                    color: #7f8c8d;
+                    font-size: 24px;
+                    margin: 10px 0 30px;
+                    font-weight: 400;
+                }
+                .content {
+                    margin: 40px 0;
+                }
+                .certificate-of {
+                    font-size: 20px;
+                    color: #555;
+                    margin-bottom: 20px;
+                }
+                .student-name {
+                    font-size: 42px;
+                    font-weight: bold;
+                    color: #2c3e50;
+                    margin: 30px 0;
+                    padding: 20px;
+                    background: linear-gradient(to right, transparent, #f8f9fa, transparent);
+                    border-radius: 10px;
+                    display: inline-block;
+                }
+                .achievement-text {
+                    font-size: 22px;
+                    color: #555;
+                    line-height: 1.6;
+                    margin: 30px auto;
+                    max-width: 600px;
+                }
+                .kategori-container {
+                    margin: 30px 0;
+                    padding: 20px;
+                    background: #e74c3c;
+                    border-radius: 15px;
+                    display: inline-block;
+                    color: white;
+                }
+                .kategori-text {
+                    font-size: 28px;
+                    font-weight: bold;
+                    margin: 0;
+                }
+                .progress-container {
+                    margin: 40px auto;
+                    max-width: 400px;
+                }
+                .progress-info {
+                    font-size: 20px;
+                    margin-bottom: 15px;
+                    font-weight: 600;
+                    color: #2c3e50;
+                }
+                .progress-bar {
+                    width: 100%;
+                    height: 30px;
+                    background: #ecf0f1;
+                    border-radius: 15px;
+                    overflow: hidden;
+                    position: relative;
+                }
+                .progress-fill {
+                    height: 100%;
+                    background: #e74c3c;
+                    width: 0%;
+                    border-radius: 15px;
+                    transition: width 1s ease-in-out;
+                    position: relative;
+                }
+                .progress-fill:after {
+                    content: "0%";
+                    position: absolute;
+                    right: 10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    color: white;
+                    font-weight: bold;
+                }
+                .details {
+                    margin: 40px 0;
+                    display: flex;
+                    justify-content: space-around;
+                    flex-wrap: wrap;
+                    gap: 20px;
+                }
+                .detail-item {
+                    text-align: center;
+                    flex: 1;
+                    min-width: 200px;
+                }
+                .detail-title {
+                    font-size: 16px;
+                    color: #7f8c8d;
+                    margin-bottom: 5px;
+                }
+                .detail-value {
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #2c3748;
+                }
+                .signature {
+                    margin-top: 60px;
+                    padding-top: 20px;
+                    border-top: 2px solid #ddd;
+                }
+                .signature-name {
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: #2c3748;
+                    margin-top: 10px;
+                }
+                .signature-title {
+                    font-size: 16px;
+                    color: #7f8c8d;
+                }
+                .footer {
+                    margin-top: 50px;
+                    color: #7f8c8d;
+                    font-size: 14px;
+                }
+                .certificate-id {
+                    font-size: 12px;
+                    margin-top: 10px;
+                    color: #95a5a6;
+                }
+                .durasi-info {
+                    background: #f8f9fa;
+                    padding: 10px 20px;
+                    border-radius: 10px;
+                    margin: 20px auto;
+                    display: inline-block;
+                    color: #555;
+                    font-size: 16px;
+                }
+                @media print {
+                    body {
+                        background: white;
+                    }
+                    .certificate {
+                        border: none;
+                        box-shadow: none;
+                    }
+                }
+            </style>
+        </head>
+        <body>
+            <div class="certificate-container">
+                <div class="certificate">
+                    <div class="header">
+                        <h1>📜 SERTIFIKAT</h1>
+                        <h2>WorkyWay Learning Platform</h2>
+                        <div class="durasi-info">
+                            <i class="fas fa-clock"></i> Durasi Kursus: 3 Bulan
+                        </div>
+                    </div>
+                    
+                    <div class="content">
+                        <p class="certificate-of">SERTIFIKAT INI DIBERIKAN KEPADA:</p>
+                        <div class="student-name"></div>
+                        
+                        <p class="achievement-text">
+                            Atas keberhasilan menyelesaikan kursus <strong>Pemrograman Web Fullstack untuk Pemula</strong>
+                            dalam waktu 3 Bulan dengan pencapaian sebagai berikut:
+                        </p>
+                        
+                        <div class="kategori-container">
+                            <p class="kategori-text">Perlu Perbaikan</p>
+                            <p style="margin: 5px 0 0; font-size: 16px;">Perlu peningkatan lebih lanjut.</p>
+                        </div>
+                        
+                        <div class="progress-container">
+                            <div class="progress-info">Tingkat Penyelesaian</div>
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="details">
+                        <div class="detail-item">
+                            <div class="detail-title">Tanggal Daftar</div>
+                            <div class="detail-value">15 February 2024</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-title">Tanggal Selesai</div>
+                            <div class="detail-value">15 May 2024</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-title">Tanggal Terbit</div>
+                            <div class="detail-value">11 January 2026</div>
+                        </div>
+                    </div>
+                    
+                    <div class="signature">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Seal_of_Indonesia.svg/1200px-Seal_of_Indonesia.svg.png" 
+                             alt="Stempel" 
+                             style="width: 120px; height: 120px; opacity: 0.7; margin-bottom: 10px;">
+                        <div class="signature-name">DR. SUTARJO, M.Kom</div>
+                        <div class="signature-title">Direktur Utama WorkyWay</div>
+                    </div>
+                    
+                    <div class="footer">
+                        <p>Website: www.workyway.com | Email: info@workyway.com | Phone: (021) 1234-5678</p>
+                        <p class="certificate-id">ID Sertifikat: CERT-1-20260111-0</p>
+                    </div>
+                </div>
+            </div>
+            
+            <script>
+                window.onload = function() {
+                    // Animasi progress bar
+                    const progressFill = document.querySelector(".progress-fill");
+                    progressFill.style.width = "0%";
+                    setTimeout(() => {
+                        progressFill.style.width = "0%";
+                    }, 500);
+                    
+                    // Auto print after 3 seconds
+                    setTimeout(() => {
+                        window.print();
+                    }, 3000);
+                };
+            </script>
+        </body>
+        </html>
