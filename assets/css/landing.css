@@ -1,0 +1,165 @@
+ :root {
+            --primary: #4361ee;
+            --secondary: #3a0ca3;
+            --accent: #f72585;
+            --light: #f8f9fa;
+            --dark: #212529;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary);
+            border-color: var(--secondary);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        
+        
+        .hero-section {
+            background: linear-gradient(135deg, #2563EB 0%, #1E40AF 100%);
+            color: white;
+            padding: 80px 0 80px;
+            min-height: 95vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .stats-section {
+            background: white;
+            margin-top: -50px;
+            position: relative;
+            z-index: 1;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+       .course-card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    height: 100%;
+    max-width: 260px;        /* ⬅️ card diperkecil */
+    margin: auto;            /* ⬅️ biar sejajar tengah */
+}
+
+/* Hover tetap halus tapi tidak terlalu tinggi */
+.course-card:hover {
+    transform: translateY(-6px);  /* ⬅️ lebih subtle */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12) !important;
+}
+
+/* Thumbnail gambar */
+.course-card .card-img-top {
+    height: 140px;           /* ⬅️ lebih pendek */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f3f4f6;     /* ⬅️ netral, bukan biru */
+    overflow: hidden;
+}
+
+/* Gambar di dalam thumbnail */
+.course-card .card-img-top img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;       /* ⬅️ biar proporsional */
+}
+
+
+        /* container siswa + rating */
+        .course-meta-row {
+            display: flex;
+            justify-content: space-between; /* kiri & kanan */
+            align-items: center;            /* sejajar vertikal */
+            margin-top: 6px;
+        }
+
+        /* siswa */
+        .student-info {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .student-icon {
+            width: 18px;
+            height: 18px;
+        }
+
+        .student-count {
+            font-size: 16px;
+            font-weight: 400;
+            color: #111;
+        }
+
+        /* rating */
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            color: #facc15;
+            font-size: 14px;
+        }
+
+        .rating-value {
+            font-size: 13px;
+            color: #6b7280;
+        }
+             /* ================================
+        TESTIMONIAL CENTERING
+        ================================ */
+
+        /* Tengah secara horizontal */
+        .testimonials-section .row.g-3 {
+            justify-content: center;
+        }
+
+        /* Card testimoni rata tengah */
+        .testimonial-card {
+            text-align: left;
+            margin: 0 auto;
+            background-color: #F9FAFB;
+        }
+
+        /* Header dalam card sejajar vertikal */
+        .testimonial-card .d-flex {
+            align-items: center;
+        }
+        .testimonial-card,
+        .testimonial-card:focus,
+        .testimonial-card:focus-visible {
+            outline: none !important;
+            border: none;
+        }
+        .testimonials-section .fa-star,
+        .testimonials-section .fa-star-half-alt {
+         font-size: 0.85rem;
+        }
+        .testimonials-section .text-warning {
+            line-height: 1;          /* buang tinggi baris berlebih */
+        }
+
+        .testimonials-section .text-warning i {
+            font-size: 0.7rem;       /* ukuran ikon */
+            line-height: 1;          /* penting */
+            margin: 0 1px;           /* jarak antar bintang */
+            padding: 0;              /* pastikan tidak ada padding */
+            vertical-align: middle;
+        }
+        .footer {
+            background-color: var(--dark);
+            color: white;
+        }
+
